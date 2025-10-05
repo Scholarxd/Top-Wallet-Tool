@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GMGN Tracker</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>GMGN Top Holders</h1>
+      <label for="count">How many to track:</label>
+      <input id="count" type="number" min="1" max="100" value="5" />
+      <div class="buttons">
+        <button id="track">Track</button>
+        <button id="untrack" class="secondary">Untrack</button>
+      </div>
+      <p id="status" class="status"></p>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
