@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "GMGN Top Holder Tracker",
+  "version": "0.1.0",
+  "description": "Rename and track GMGN.ai top holder wallets (Track/Untrack first N).",
+  "permissions": [
+    "storage",
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://gmgn.ai/*",
+    "https://www.gmgn.ai/*"
+  ],
+  "action": {
+    "default_title": "GMGN Tracker",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://gmgn.ai/*",
+        "https://www.gmgn.ai/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
